@@ -3,10 +3,12 @@ import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
 import { captureError } from 'rxjs/internal/util/errorContext';
 import { catchError } from 'rxjs';
+import { TodoItemComponent } from "../components/todo-item/todo-item.component";
+
 
 @Component({
   selector: 'app-todos',
-  imports: [],
+  imports: [TodosComponent, TodoItemComponent],
   templateUrl: './todos.component.html',
   styleUrl: './todos.component.scss'
 })
